@@ -40,6 +40,7 @@ while ($arr = mysql_fetch_object($query)){
 
 
 $arr = array(
+    'email' => 'elegzh@gmail.com',
     'id' => 2,
     'name' => 3,
     'cate' => array(
