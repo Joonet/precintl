@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="www.precintl.com">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="imooc">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sky"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="test"/>
+    <table id="9" parent="2" name="fruitshop"/>
+    <table id="10" parent="2" name="tb1"/>
+    <table id="11" parent="2" name="tdb_goods"/>
+    <table id="12" parent="2" name="tdb_goods_brands"/>
+    <table id="13" parent="2" name="tdb_goods_cates"/>
+    <table id="14" parent="2" name="tdb_goods_types"/>
+    <routine id="15" parent="2" name="adduser">
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <routine id="16" parent="2" name="deleteUserAndReturnUserNums">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="17" parent="2" name="f1">
+      <RoutineKind>function</RoutineKind>
+    </routine>
+    <routine id="18" parent="2" name="RemoveUserAndReturnUserNums">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="19" parent="2" name="removeUserByAgeAndReturnInfos">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="20" parent="2" name="removeUserByID">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="21" parent="2" name="removeUserByInfos">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="22" parent="2" name="sp2">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="23" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="9" name="name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="25" parent="9" name="num">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="9" name="price">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="27" parent="9" name="name">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="9" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="29" parent="9" name="name">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>name</UnderlyingIndexName>
+    </key>
+    <column id="30" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="31" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>char(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="10" name="age">
+      <Position>3</Position>
+      <DataType>tinyint(3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="33" parent="10" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="11" name="goods_id">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="11" name="goods_name">
+      <Position>2</Position>
+      <DataType>varchar(150)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="11" name="cate_id">
+      <Position>3</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="11" name="brand_id">
+      <Position>4</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="11" name="goods_price">
+      <Position>5</Position>
+      <DataType>decimal(15,3) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0.000&apos;</DefaultExpression>
+    </column>
+    <column id="39" parent="11" name="is_show">
+      <Position>6</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="40" parent="11" name="is_saleoff">
+      <Position>7</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="41" parent="11" name="age">
+      <Position>8</Position>
+      <DataType>tinyint(3)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="42" parent="11" name="PRIMARY">
+      <ColNames>goods_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="12" name="brand_id">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="44" parent="12" name="brand_name">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="45" parent="12" name="PRIMARY">
+      <ColNames>brand_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="46" parent="13" name="cate_id">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="47" parent="13" name="cate_name">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="48" parent="13" name="PRIMARY">
+      <ColNames>cate_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="49" parent="14" name="type_id">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="50" parent="14" name="type_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="14" name="parent_id">
+      <Position>3</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="52" parent="14" name="PRIMARY">
+      <ColNames>type_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <argument id="53" parent="15">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>int(10) unsigned|0</DataType>
+    </argument>
+    <argument id="54" parent="15" name="username">
+      <DataType>varchar(20)|0</DataType>
+    </argument>
+    <argument id="55" parent="16" name="p_id">
+      <DataType>int(10) unsigned|0</DataType>
+    </argument>
+    <argument id="56" parent="16" name="userNums">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>int(10) unsigned|0</DataType>
+    </argument>
+    <argument id="57" parent="17">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>varchar(30)|0</DataType>
+    </argument>
+    <argument id="58" parent="18" name="p_id">
+      <DataType>int(10) unsigned|0</DataType>
+    </argument>
+    <argument id="59" parent="18" name="userNums">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>int(10) unsigned|0</DataType>
+    </argument>
+    <argument id="60" parent="19" name="p_cate_id">
+      <DataType>smallint(5) unsigned|0</DataType>
+    </argument>
+    <argument id="61" parent="19" name="deleterUsers">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>smallint(5) unsigned|0</DataType>
+    </argument>
+    <argument id="62" parent="19" name="usersCount">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>smallint(5) unsigned|0</DataType>
+    </argument>
+    <argument id="63" parent="20" name="mid">
+      <DataType>int(10) unsigned|0</DataType>
+    </argument>
+    <argument id="64" parent="21" name="p_id">
+      <DataType>int(10) unsigned|0</DataType>
+    </argument>
+    <argument id="65" parent="21" name="deleteUser">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>smallint(5) unsigned|0</DataType>
+    </argument>
+    <argument id="66" parent="21" name="userCounts">
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>smallint(5) unsigned|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>
